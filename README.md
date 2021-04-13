@@ -30,7 +30,7 @@ Wait a while or `Ctrl+C` if you can't. That's all.
 
 ## Troubleshooting
 
-In MacOS, you can do something like this:
+In **MacOS**, you can do something like this:
 
 ```sh
 echo '#!/bin/sh\n\n/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $@' > /usr/local/bin/chrome
@@ -38,5 +38,9 @@ echo '#!/bin/sh\n\n/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrom
 chmod +x /usr/local/bin/chrome
 ```
 
-In other OS, you can do something equivalent to above. The idea is `chrome` command should point to **Chrome Browser**.
+In **WSL**, you can symlink chrome from host WinOS like this:
+```sh
+sudo ln -s /mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe /usr/local/bin/chrome
+```
 
+In other OS, you can do something equivalent to above. The idea is `chrome` command should point to **Chrome Browser**.
