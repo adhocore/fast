@@ -24,7 +24,7 @@ func Measure() (*Fast, error) {
 	)
 	defer cancel()
 
-	ctx, cancel = context.WithTimeout(ctx, 60*time.Second)
+	ctx, cancel = context.WithTimeout(ctx, 180*time.Second)
 	defer cancel()
 
 	fast := new(Fast)
