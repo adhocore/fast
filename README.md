@@ -1,5 +1,10 @@
 # adhocore/fast
 
+[![Go Report](https://goreportcard.com/badge/github.com/adhocore/fast)](https://goreportcard.com/report/github.com/adhocore/fast)
+[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://www.paypal.me/ji10/50usd)
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Golang+tool+to+check+internet+speed+right+from+the+terminal&url=https://github.com/adhocore/fast&hashtags=php,jwt,auth)
+
+
 A GO lang command line tool to check internet speed right from the terminal.
 
 > Uses [fast.com](https://fast.com) through headless chrome.
