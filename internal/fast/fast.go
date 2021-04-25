@@ -6,10 +6,11 @@ import (
 	"log"
 	"time"
 
-	"github.com/chromedp/chromedp"
 	"github.com/chromedp/cdproto/emulation"
+	"github.com/chromedp/chromedp"
 )
 
+// Fast represents measurement structure
 type Fast struct {
 	Up       string
 	Down     string
@@ -17,6 +18,8 @@ type Fast struct {
 	DownUnit string
 }
 
+// Measure does the main job.
+// It returns *Fast and error
 func Measure() (*Fast, error) {
 	ctx, cancel := chromedp.NewContext(
 		context.Background(),
@@ -28,7 +31,7 @@ func Measure() (*Fast, error) {
 	defer cancel()
 
 	fast := new(Fast)
-	err  := chromedp.Run(ctx,
+	err := chromedp.Run(ctx,
 		emulation.SetUserAgentOverride(`chromedp/chromedp v0.6.10`),
 		chromedp.Navigate(`https://fast.com`),
 		chromedp.ScrollIntoView(`footer`),
@@ -44,6 +47,8 @@ func Measure() (*Fast, error) {
 	return fast, err
 }
 
+// Run is the ready to use API.
+// For customization call Measure().
 func Run() {
 	start := time.Now()
 
