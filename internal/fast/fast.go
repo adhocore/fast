@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"os"
 	"time"
 
 	"github.com/chromedp/cdproto/emulation"
@@ -55,6 +56,15 @@ func Run() {
 	fast, err := Measure()
 	if err != nil {
 		log.Fatal(err)
+	}
+
+	if os.PathSeparator == '\\' {
+		fmt.Printf("download speed: %s %s\n", fast.Down, fast.DownUnit)
+		fmt.Printf("upload speed: %s %s\n", fast.Up, fast.UpUnit)
+		fmt.Printf("\n")
+		fmt.Printf("> took: %f secs\n", time.Since(start).Seconds())
+
+		return
 	}
 
 	fmt.Printf("\033[36mdownload speed:\033[m \033[32m%s\033[m %s\n", fast.Down, fast.DownUnit)
