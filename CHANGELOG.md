@@ -1,3 +1,12 @@
+## [v0.1.1](https://github.com/adhocore/fast/releases/tag/v0.1.1) (2021-05-04)
+
+### Bug Fixes
+- **Internal.fast**: No color in windows (Jitendra Adhikari) [_a429138_](https://github.com/adhocore/fast/commit/a429138)
+
+### Documentations
+- Add src docs, fix style (Jitendra Adhikari) [_00be839_](https://github.com/adhocore/fast/commit/00be839)
+
+
 ## [v0.1.0](https://github.com/adhocore/fast/releases/tag/v0.1.0) (2021-04-13)
 
 ### Features
@@ -20,5 +29,3 @@
 ### Documentations
 - Add wsl troubleshooting (Jitendra Adhikari) [_1cd4c3a_](https://github.com/adhocore/fast/commit/1cd4c3a)
 - Add readme (Jitendra Adhikari) [_712de31_](https://github.com/adhocore/fast/commit/712de31)
-
-
