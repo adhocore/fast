@@ -49,3 +49,10 @@ sudo ln -s /mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe /usr/local
 ```
 
 In other OS, you can do something equivalent to above. The idea is `chrome` command should point to **Chrome Browser**.
+
+---
+### Other projects
+My other golang projects you might find interesting and useful:
+
+- [**gronx**](https://github.com/adhocore/gronx) - Lightweight, fast and dependency-free Cron expression parser (due checker), task scheduler and/or daemon for Golang (tested on v1.13 and above) and standalone usage.
+- [**urlsh**](https://github.com/adhocore/urlsh) - URL shortener and bookmarker service with UI, API, Cache, Hits Counter and forwarder using postgres and redis in backend, bulma in frontend; has [web](https://urlssh.xyz) and cli client
