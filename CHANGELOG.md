@@ -1,3 +1,16 @@
+## [v0.2.0](https://github.com/adhocore/go-fast/releases/tag/v0.2.0) (2021-05-06)
+
+### Features
+- **Cmd.fast**: Add flag for upload speed, show spinner (Jitendra Adhikari) [_c897efa_](https://github.com/adhocore/go-fast/commit/c897efa)
+
+### Internal Refactors
+- **Internal.fast**: Make upload speed optional, extract output func (Jitendra Adhikari) [_83290fc_](https://github.com/adhocore/go-fast/commit/83290fc)
+
+### Miscellaneous
+- **Workflows**: Add lint action (Jitendra Adhikari) [_ccc380a_](https://github.com/adhocore/go-fast/commit/ccc380a)
+- **Main**: Do not show upload speed in default (Jitendra Adhikari) [_d345faa_](https://github.com/adhocore/go-fast/commit/d345faa)
+
+
 ## [v0.1.1](https://github.com/adhocore/fast/releases/tag/v0.1.1) (2021-05-04)
 
 ### Bug Fixes
