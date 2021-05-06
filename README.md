@@ -26,6 +26,9 @@ go get -u github.com/adhocore/fast/cmd/fast
 Finally, make sure `$GOPATH` or `$HOME/go/bin` is in your `$PATH` or `%path%`, then run:
 ```sh
 fast
+
+# if you just want download speed (pass -noup aka no upload speed)
+fast -noup
 ```
 
 Wait a while or `Ctrl+C` if you can't. That's all.
