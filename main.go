@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	fast.Run()
+	fast.Run(true)
 }
