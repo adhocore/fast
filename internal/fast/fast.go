@@ -67,6 +67,7 @@ func Run(noUp bool) {
 	Out(fast, start)
 }
 
+// Out prints the output to terminal
 func Out(fast *Fast, start time.Time) {
 	hasUp := fast.Up != "" && fast.UpUnit != ""
 
