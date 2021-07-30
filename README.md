@@ -2,7 +2,9 @@
 
 [![Go Report](https://goreportcard.com/badge/github.com/adhocore/fast)](https://goreportcard.com/report/github.com/adhocore/fast)
 [![Lint](https://github.com/adhocore/fast/actions/workflows/lint-action.yml/badge.svg)](https://github.com/adhocore/fast/actions/workflows/lint-action.yml)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://www.paypal.me/ji10/50usd)
+[![Donate 15](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square&label=donate+15)](https://www.paypal.me/ji10/15usd)
+[![Donate 25](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square&label=donate+25)](https://www.paypal.me/ji10/25usd)
+[![Donate 50](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square&label=donate+50)](https://www.paypal.me/ji10/50usd)
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Golang+tool+to+check+internet+speed+right+from+the+terminal&url=https://github.com/adhocore/fast&hashtags=php,jwt,auth)
 
 
