@@ -23,6 +23,9 @@ Chrome browser must be installed. **`chromedp`** will try to locate the chrome e
 Install `fast`:
 ```sh
 go get -u github.com/adhocore/fast/cmd/fast
+
+# or in recent go versions:
+go install github.com/adhocore/fast/cmd/fast@v1.0.0
 ```
 
 Finally, make sure `$GOPATH` or `$HOME/go/bin` is in your `$PATH` or `%path%`, then run:
