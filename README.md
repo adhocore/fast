@@ -25,7 +25,7 @@ Install `fast`:
 go get -u github.com/adhocore/fast/cmd/fast
 
 # or in recent go versions:
-go install github.com/adhocore/fast/cmd/fast@v1.0.0
+go install github.com/adhocore/fast/cmd/fast@v1.1.0
 ```
 
 Finally, make sure `$GOPATH` or `$HOME/go/bin` is in your `$PATH` or `%path%`, then run:
