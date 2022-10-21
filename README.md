@@ -14,7 +14,7 @@ A GO lang command line tool to check internet speed right from the terminal.
 
 ## Prerequistie
 
-Chrome browser must be installed. **`chromedp`** will try to locate the chrome executable automatically from these [paths](https://github.com/chromedp/chromedp/blob/master/allocate.go#L334-L352).
+Chrome or Chromium or Brave browser must be installed. **`chromedp`** will try to locate the chrome executable automatically from these [paths](https://github.com/chromedp/chromedp/blob/master/allocate.go#L334-L352).
 
 > If you get error regarding chrome availability, and you have chrome in custom path then check [Troubleshooting](#troubleshooting).
 
