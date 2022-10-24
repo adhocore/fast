@@ -23,8 +23,9 @@ Chrome or Chromium or Brave browser must be installed. **`chromedp`** will try t
 Install `fast`:
 ```sh
 go get -u github.com/adhocore/fast/cmd/fast
-
-# or in recent go versions:
+```
+> or in recent go versions:
+```
 go install github.com/adhocore/fast/cmd/fast@v1.2.0
 ```
 
@@ -65,3 +66,5 @@ My other golang projects you might find interesting and useful:
 
 - [**gronx**](https://github.com/adhocore/gronx) - Lightweight, fast and dependency-free Cron expression parser (due checker), task scheduler and/or daemon for Golang (tested on v1.13 and above) and standalone usage.
 - [**urlsh**](https://github.com/adhocore/urlsh) - URL shortener and bookmarker service with UI, API, Cache, Hits Counter and forwarder using postgres and redis in backend, bulma in frontend; has [web](https://urlssh.xyz) and cli client
+- [**goic**](https://github.com/adhocore/goic) - Go Open ID Connect, is OpenID connect client library for Golang, supports the Authorization Code Flow of OpenID Connect specification.
+- [**chin**](https://github.com/adhocore/chin) - A GO lang command line tool to show a spinner as user waits for some long running jobs to finish.
