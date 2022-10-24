@@ -3,7 +3,8 @@ module github.com/adhocore/fast
 go 1.15
 
 require (
-	github.com/chromedp/cdproto v0.0.0-20221011223153-490dc4d81f7c
+	github.com/adhocore/chin v1.0.0
+	github.com/chromedp/cdproto v0.0.0-20221023212508-67ada9507fb2
 	github.com/chromedp/chromedp v0.8.6
-	golang.org/x/sys v0.0.0-20221013171732-95e765b1cc43 // indirect
+	golang.org/x/sys v0.1.0 // indirect
 )
