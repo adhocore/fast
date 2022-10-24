@@ -2,60 +2,43 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"log"
 	"sync"
 	"time"
 
+	"github.com/adhocore/chin"
 	"github.com/adhocore/fast/internal/fast"
 )
 
-func main() {
-	var noUp bool
-	var wg sync.WaitGroup
+var noUp bool
 
+func init() {
 	flag.BoolVar(&noUp, "noup", false, "Do not show upload speed (shows only download speed)")
 	flag.Parse()
+}
+
+func main() {
+	var wg sync.WaitGroup
+
+	s := chin.New().WithWait(&wg)
+	go s.Start()
+
 	wg.Add(1)
-
-	ch := make(chan bool)
-
-	go doSpin(ch)
-	go doFast(ch, &wg, noUp)
+	go doFast(s, &wg, noUp)
 
 	wg.Wait()
 }
 
-func doSpin(ch chan bool) {
-	chars := []string{"+", "\\", "|", "/", "-", "+", "\\", "|", "/", "-"}
-
-	for {
-	outer:
-		select {
-		case _, ok := <-ch:
-			if ok {
-				fmt.Print("\010")
-				break outer
-			}
-		default:
-			for _, c := range chars {
-				fmt.Print(c, "\010")
-				time.Sleep(50 * time.Millisecond)
-			}
-		}
-	}
-}
-
-func doFast(ch chan bool, wg *sync.WaitGroup, noUp bool) {
+func doFast(s *chin.Chin, wg *sync.WaitGroup, noUp bool) {
 	defer wg.Done()
 
 	start := time.Now()
 	res, err := fast.Measure(noUp)
-	ch <- true
 
 	if err != nil {
 		log.Fatalf("error measuring speed: %v", err)
 	}
 
+	s.Stop()
 	fast.Out(res, start)
 }
