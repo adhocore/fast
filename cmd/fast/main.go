@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/adhocore/chin"
-	"github.com/adhocore/fast/internal/fast"
+	"github.com/adhocore/fast"
 )
 
 var noUp bool

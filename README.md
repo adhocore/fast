@@ -20,7 +20,7 @@ Chrome or Chromium or Brave browser must be installed. **`chromedp`** will try t
 
 ## Usage
 
-Install `fast`:
+Install `fast` binary:
 ```sh
 go get -u github.com/adhocore/fast/cmd/fast
 ```
@@ -38,6 +38,34 @@ fast -noup
 ```
 
 Wait a while or `Ctrl+C` if you can't. That's all.
+
+### Integration
+
+You can also integrate `fast` in your Go projects.
+
+```go
+import (
+    "github.com/adhocore/chin"
+    "github.com/adhocore/fast"
+)
+
+// true if you want only download speed
+noUpload := false
+
+// Optional, shows a spinner while waiting result,
+spin := chin.New()
+go spin.Start()
+
+// Prints the output right away:
+fast.Run(noUpload)
+
+// OR, to customize print style:
+res, err := fast.Measure(noUpload)
+// Then use res (`fast.Fast` struct) to print in custom style.
+
+// Stop the spinner finally!
+spin.Stop()
+```
 
 ## Screen
 
