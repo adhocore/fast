@@ -1,3 +1,18 @@
+## [v1.3.0](https://github.com/adhocore/fast/releases/tag/v1.3.0) (2022-11-02)
+
+### Features
+- Add fast as root pkg (Jitendra Adhikari)
+
+### Bug Fixes
+- **Cmd**: Import path (Jitendra Adhikari)
+
+### Internal Refactors
+- Remove internal (Jitendra Adhikari)
+
+### Documentations
+- Update docs with usage/integration (Jitendra Adhikari)
+
+
 ## [v0.2.0](https://github.com/adhocore/go-fast/releases/tag/v0.2.0) (2021-05-06)
 
 ### Features
