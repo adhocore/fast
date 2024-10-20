@@ -3,7 +3,10 @@ package main
 import (
 	"flag"
 	"log"
+	"os"
+	"os/signal"
 	"sync"
+	"syscall"
 	"time"
 
 	"github.com/adhocore/chin"
@@ -23,8 +26,16 @@ func main() {
 	s := chin.New().WithWait(&wg)
 	go s.Start()
 
+	var sig = make(chan os.Signal, 1)
+	signal.Notify(sig, os.Interrupt, syscall.SIGTERM, syscall.SIGABRT)
+
 	wg.Add(1)
 	go doFast(s, &wg, noUp)
+
+	go func() {
+		<-sig
+		s.Stop()
+	}()
 
 	wg.Wait()
 }
