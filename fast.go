@@ -61,7 +61,7 @@ func Measure(noUp bool) (*Fast, error) {
 
 	var err error
 	for _, browser := range browsers {
-		err = doMeasure(browser, fast, cmds...)
+		err = doMeasure(browser, cmds...)
 		if err == nil || !errors.Is(err, exec.ErrNotFound) {
 			break
 		}
@@ -70,7 +70,7 @@ func Measure(noUp bool) (*Fast, error) {
 	return fast, err
 }
 
-func doMeasure(browser string, fast *Fast, cmds ...chromedp.Action) error {
+func doMeasure(browser string, cmds ...chromedp.Action) error {
 	opts := chromedp.DefaultExecAllocatorOptions[:]
 	if browser != "" {
 		opts = append(opts, chromedp.ExecPath(browser))
