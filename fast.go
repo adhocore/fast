@@ -38,7 +38,7 @@ type Fast struct {
 func Measure(noUp bool) (*Fast, error) {
 	fast := new(Fast)
 	cmds := []chromedp.Action{
-		emulation.SetUserAgentOverride(`chromedp/chromedp v0.8.6`),
+		emulation.SetUserAgentOverride(`chromedp/chromedp v0.13.2`),
 		chromedp.Navigate(`https://fast.com`),
 		chromedp.ScrollIntoView(`footer`),
 		chromedp.WaitVisible(`#speed-value.succeeded`),
